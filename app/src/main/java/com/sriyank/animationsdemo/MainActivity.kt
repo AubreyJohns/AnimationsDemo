@@ -45,7 +45,9 @@ class MainActivity : AppCompatActivity() {
 	fun fadeAnimation(view: View) {
 
 		val fadeAnimator = AnimatorInflater.loadAnimator(this, R.animator.alpha)
-		fadeAnimator.setTarget(targetImage)
-		fadeAnimator.start()
+        fadeAnimator?.apply {
+            setTarget(targetImage)
+            start()
+        }
 	}
 }
